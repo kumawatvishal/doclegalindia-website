@@ -1,0 +1,541 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css" integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    .slick-prev {
+    left: -55px;
+    }
+    .slick-prev:before, .slick-next:before{
+        padding: 10px;
+        font-size: 30px;
+        border-style: solid;
+        border-width: 2px 2px 2px 2px;
+        border-color: #002699;
+        border-radius: 5px 5px 5px 5px;
+        color: #002699;
+    }
+    .slick-prev.slick-disabled:before{
+        opacity: 100%;
+    }
+    .slick-prev:hover{
+        color: red;
+    }
+    @media only screen and (max-width: 600px){
+        .slick-prev:before, .slick-next:before{
+            display: none;
+            visibility: hidden;
+        }
+        .slick-next{
+            right: 0;
+        }
+    }
+    .our:hover{
+      box-shadow: 0px 4px 60px 0px rgba(0, 0, 0, 0.06);
+    }
+</style>
+<body>
+  <header style="z-index: 1;">
+    <div class="bg-[#043370] px-[15px] md:px-0 hidden md:block">
+      <div class="max-w-[1300px] mx-auto py-[20px] flex justify-between">
+        <div class="flex gap-4 items-center">
+          <div class="text-white text-[17px] font-semibold"><i class="fa-solid fa-phone-volume me-2"></i>+91-18001234436</div>
+          <div class="border-[1px] border-gray-400 h-[16px]"></div>
+          <div class="text-white text-[17px] font-semibold"><i class="fa-brands fa-whatsapp me-2"></i>+91-9511331990</div>
+        </div>
+        <div class="flex gap-[40px] items-center">
+          <div class="text-white text-[17px] font-semibold"><i class="fa-regular fa-envelope me-2"></i>contact@doclegalindia.com</div>
+          <div class="text-white flex gap-5 items-center"><i class="fa-brands fa-facebook-f text-[25px]"></i><i class="fa-brands fa-linkedin-in"></i><i class="fa-brands fa-twitter"></i></div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-white px-[15px] md:px-0">
+      <div class="max-w-[1300px] mx-auto py-[18px] border-[#FFFFFF1A] border-b-[1px] flex justify-between">
+       <div><img class="w-[115px] md:w-[200px]" src="images/logo.png" alt=""></div>
+       <ul class="flex hidden md:flex">
+        <li class="text-[#010E37] py-[14px] px-[8px] text-[17px] font-semibold leading-[24px] hover:text-[#F15E03] cursor-pointer">Home</li>
+        <li class="text-[#010E37] py-[14px] px-[8px] text-[17px] font-semibold leading-[24px] hover:text-[#F15E03] cursor-pointer">About Us</li>
+        <li class="text-[#010E37] py-[14px] px-[8px] text-[17px] font-semibold leading-[24px] hover:text-[#F15E03] cursor-pointer">Membership</li>
+        <li class="text-[#010E37] py-[14px] px-[8px] text-[17px] font-semibold leading-[24px] hover:text-[#F15E03] cursor-pointer">Our Services</li>
+        <li class="text-[#010E37] py-[14px] px-[8px] text-[17px] font-semibold leading-[24px] hover:text-[#F15E03] cursor-pointer">Insurance</li>
+        <li class="text-[#010E37] py-[14px] px-[8px] text-[17px] font-semibold leading-[24px] hover:text-[#F15E03] cursor-pointer">Blog</li>
+        <li class="text-[#010E37] py-[14px] px-[8px] text-[17px] font-semibold leading-[24px] hover:text-[#F15E03] cursor-pointer">Contact Us</li>
+       </ul>
+       <button class="hidden md:block rounded-[4px] text-[16px] font-medium leading-[16px] py-[10px] px-[30px] bg-[#043370] text-white">Login / Register</button>
+       <i class="block md:hidden fa-solid fa-bars text-[20px]"></i> 
+      </div>
+    </div>
+  </header>
+  <section class="about-dcpl px-[15px] md:px-0 py-[50px]">
+    <div class="max-w-[1300px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-[24px]">
+      <div class="col-span-1 ps-0 md:ps-[40px]"><img class="w-full h-[315px] md:h-[500px]" src="images/about-dcpl.png" alt=""></div>
+      <div class="col-span-1 pe-0 md:pe-[50px]">  
+          <h5 class="text-[#F15E03] text-[18px] font-semibold leading-[18px] text-center md:text-start mb-2 md:mb-0">About DCPL</h5>
+          <h2 class="mb-[18px] text-[#010E37] text-[36px] font-medium leading-[40px] text-center md:text-start">Exceptional medico legal solutions for doctors</h2>
+          <p class="mb-[16px] text-[#797375] text-justify text-[17px] font-normal leading-[28px]">DocLegal is a professional risk management company that medico-legal risk management and to doctors & hospitals across India. We are a registered entity of the Indian Companies Act, 2013. We understand the challenges faced by the medical profession and are committed to supporting and protecting our members throughout their practice. We provide exceptional representation & services in legal matters for our members. In addition, we have a professional medico-legal and legal experts’ team and a Medical Advisory Board made up of doctors from different specialties. This board allows us to provide our members with the best possible medical advice & support. We cannot guarantee success every time, but we assure you that we will work systematically, diligently, & result-orientedly on your behalf. We take pride in being a reputable & reliable risk management company, committed to providing you with professional medical risk management services & a complete indemnity policy.</p>
+          <div class="flex justify-end"><button class="bg-[#F3823D] rounded-[50px] text-white text-[15px] py-[12px] px-[24px] font-medium">View More</button></div>
+        </div>
+    </div>
+  </section>
+  <section class="medico-legal-services px-[15px] md:px-0 py-[50px] bg-[#F7F7F9]">
+    <div class="max-w-[1300px] mx-auto">
+      <div class="pb-[20px]">
+        <h5 class="mb-[20px] text-[#F15E03] text-[18px] font-bold md:font-semibold leading-[18px] text-center">Why Choose DCPL?</h5>
+        <h2 class="mb-[18px] text-[#010E37] text-[34px] md:text-[36px] font-bold leading-[40px] text-center">Reason for Choosing our Medico-Legal Services</h2>
+      </div>
+    </div>
+    <div class="max-w-[1300px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-[25px]">
+      <div class="col-span-1 hover:border-white border-[1px] border-[#E1E1E1] rounded-[9px] px-[30px] pt-[30px] pb-[20px] hover:bg-white our">
+        <div class="mb-[24px] flex justify-center"><img class="w-[70px] h-[70px]" src="images/medico-legal-services/legally-sound.png" alt=""></div>
+        <h5 class="mb-[20px] text-[#010E37] text-[20px] font-bold leading-[26px] text-center">Legally sound</h5>
+        <p class="text-[15px] leading-[26px] text-[#5f667c] text-center font-medium hidden md:block">Every legal problem of DCPL's client requires great analytical and evaluative skills. This is taken care by our passionate legal team, with their excellent written, oratory &amp; organisational skills. We are relentless in serving our clients, and we deliver..</p>
+        <p class="text-[15px] leading-[26px] text-[#5f667c] text-center font-medium block md:hidden">Every legal problem of DCPL's client requires great analytical and evaluative skills. This is taken care by our passionate legal team, with their excellent written, oratory &amp;...</p>
+        <div class="flex justify-center mt-2"><button class="text-[17px] text-[#010E37] font-medium md:font-bold">Read More <i class="fa-solid fa-arrow-right-long ms-1"></i></button></div>
+      </div>
+      <div class="col-span-1 hover:border-white border-[1px] border-[#E1E1E1] rounded-[9px] px-[30px] pt-[30px] pb-[20px] hover:bg-white our">
+        <div class="mb-[24px] flex justify-center"><img class="w-[70px] h-[70px]" src="images/medico-legal-services/experienced.png" alt=""></div>
+        <h5 class="mb-[20px] text-[#010E37] text-[20px] font-bold leading-[26px] text-center">Experienced</h5>
+        <p class="text-[15px] leading-[26px] text-[#5f667c] text-center font-medium hidden md:block">Sound and experienced lawyer, conscientious, principled and level-headed Many clients see a benefit in having their work done personally by Focused on sector with the greatest complexities, legal intricacies and highest regulatory demand...</p>
+        <p class="text-[15px] leading-[26px] text-[#5f667c] text-center font-medium block md:hidden">Sound and experienced lawyer, conscientious, principled and level-headed Many clients see a benefit in having their work done personally by Focused on sector with the greatest...</p>
+        <div class="flex justify-center mt-2"><button class="text-[17px] text-[#010E37] font-medium md:font-bold">Read More <i class="fa-solid fa-arrow-right-long ms-1"></i></button></div>
+      </div>
+      <div class="col-span-1 hover:border-white border-[1px] border-[#E1E1E1] rounded-[9px] px-[30px] pt-[30px] pb-[20px] hover:bg-white our">
+        <div class="mb-[24px] flex justify-center"><img class="w-[70px] h-[70px]" src="images/medico-legal-services/trusted.png" alt=""></div>
+        <h5 class="mb-[20px] text-[#010E37] text-[20px] font-bold leading-[26px] text-center">Trusted</h5>
+        <p class="text-[15px] leading-[26px] text-[#5f667c] text-center font-medium hidden md:block">To build a reputation & exceed expectations with our member's by hard work, innovative & prompt actions. To give correct advice on legal matters to the Medical fraternity & gain their trust & respect.</p>
+        <p class="text-[15px] leading-[26px] text-[#5f667c] text-center font-medium block md:hidden">To build a reputation & exceed expectations with our member's by hard work, innovative & prompt actions. To give correct advice on legal matters to the Medical fraternity...</p>
+        <div class="flex justify-center mt-2"><button class="text-[17px] text-[#010E37] font-medium md:font-bold">Read More <i class="fa-solid fa-arrow-right-long ms-1"></i></button></div>
+      </div>
+    </div>
+  </section>
+  <section class="insurance px-[15px] md:px-0 py-[50px]">
+    <div class="max-w-[1300px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-[85px]">
+      <div class="col-span-1">
+          <h5 class="text-[#F15E03] text-[18px] font-semibold leading-[18px] text-center md:text-start mb-2 md:mb-0">Insurance</h5>
+          <h2 class="mb-[18px] text-[#010E37] text-[36px] font-medium leading-[40px] text-center md:text-start">Get the Right Medical Indemnity Insurance Plan Today!</h2>
+          <p class="mb-[16px] text-[#797375] text-justify text-[18px] font-normal leading-[30px]">Medical indemnity insurance, or professional liability insurance (PLI), is a requirement for medical professionals like doctors, hospitals, and others. This insurance protects them from mistakes and claims made by patients and caregivers. Different from regular insurance policies, they cover claims related to their profession. Medical indemnity insurance policies safeguard professionals against negligence, misrepresentation, and malpractice claims. These claims can be serious, making this insurance essential for medical professionals. So, if you need the best medical indemnity insurance, reach out to DocLegal today. Our experts will help you choose the right plan. Our goal at DocLegal is to assist medical professionals in practicing without worrying about medicolegal issues. Don’t hesitate to contact us now.</p>
+          <div><button class="bg-[#F3823D] rounded-[50px] text-white text-[15px] py-[12px] px-[24px] font-medium">View More</button></div>
+        </div>
+      <div class="col-span-1 pe-0 md:pe-[50px]"><img class="w-full h-[330px] md:h-[576px]" src="images/insurance.png" alt=""></div>
+    </div>
+  </section>
+  <section class="services px-[15px] md:px-0 py-[50px]">
+    <div class="max-w-[1300] mx-auto">
+      <div class="pb-[30px]">
+        <h5 class="mb-[24px] text-[#F15E03] text-[17px] font-bold leading-[16px] text-center">Our Services</h5>
+        <h1 class="mb-[18px] text-[#010E37] text-[32px] md:text-[36px] font-bold leading-[40px] text-center max-w-[100%] md:max-w-[60%] mx-auto">Comprehensive Medico Legal Protection & Support for Every Medical Professional!</h1>
+      </div>
+    </div>
+    <div class="max-w-[1300px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-4">
+      <div class="col-span-1 p-[40px] rounded-[10px] text-center group cursor-pointer" style="box-shadow: 0px 4px 60px 0px rgba(0, 0, 0, 0.06)">
+        <div class="flex justify-center mb-[24px]"><img class="w-[80px] h-[80px]" src="images/services/doctor.png" alt=""></div>
+        <h5 class="text-[#010E37] text-[18px] font-bold leading-[24px] group-hover:text-[#F15E03]">Doctors</h5>
+        <p class="text-[#000] text-[15px] leading-[26px] font-medium">We provide expert guidance to medical professionals.</p>
+      </div>  
+      <div class="col-span-1 p-[40px] rounded-[10px] text-center group cursor-pointer our">
+        <div class="flex justify-center mb-[24px]"><img class="w-[80px] h-[80px]" src="images/services/clinics.png" alt=""></div>
+        <h5 class="text-[#010E37] text-[18px] font-bold leading-[24px] group-hover:text-[#F15E03]">Clinics</h5>
+        <p class="text-[#000] text-[15px] leading-[26px] font-medium">We focus on your growth and development, without worrying about medico-legal risks.</p>
+      </div>
+      <div class="col-span-1 p-[40px] rounded-[10px] text-center group cursor-pointer our">
+        <div class="flex justify-center mb-[24px]"><img class="w-[80px] h-[80px]" src="images/services/nursing-homes.png" alt=""></div>
+        <h5 class="text-[#010E37] text-[18px] font-bold leading-[24px] group-hover:text-[#F15E03]">Nursing Homes</h5>
+        <p class="text-[#000] text-[15px] leading-[26px] font-medium">We fight for your rights and protect the reputation of your nursing home.</p>
+      </div>
+      <div class="col-span-1 p-[40px] rounded-[10px] text-center group cursor-pointer our">
+        <div class="flex justify-center mb-[24px]"><img class="w-[80px] h-[80px]" src="images/services/hospitals.png" alt=""></div>
+        <h5 class="text-[#010E37] text-[18px] font-bold leading-[24px] group-hover:text-[#F15E03]">Hospitals</h5>
+        <p class="text-[#000] text-[15px] leading-[26px] font-medium">We are with you and will always support you in your legal problems.</p>
+      </div>
+      <div class="col-span-1 p-[40px] rounded-[10px] text-center group cursor-pointer our">
+        <div class="flex justify-center mb-[24px]"><img class="w-[80px] h-[80px]" src="images/services/diagnostic-centre.png" alt=""></div>
+        <h5 class="text-[#010E37] text-[18px] font-bold leading-[24px] group-hover:text-[#F15E03]">Diagnostic Centre</h5>
+        <p class="text-[#000] text-[15px] leading-[26px] font-medium">We provide all types of legal protection for your medico-legal risks.</p>
+      </div>
+      <div class="col-span-1 p-[40px] rounded-[10px] text-center group cursor-pointer our">
+        <div class="flex justify-center mb-[24px]"><img class="w-[80px] h-[80px]" src="images/services/ivf-centres.png" alt=""></div>
+        <h5 class="text-[#010E37] text-[18px] font-bold leading-[24px] group-hover:text-[#F15E03]">IVF Centres</h5>
+        <p class="text-[#000] text-[15px] leading-[26px] font-medium">We provide professional protection against negligence to your unqualified employees.</p>
+      </div>
+      <div class="col-span-1 p-[40px] rounded-[10px] text-center group cursor-pointer our">
+        <div class="flex justify-center mb-[24px]"><img class="w-[80px] h-[80px]" src="images/services/day-care-centres.png" alt=""></div>
+        <h5 class="text-[#010E37] text-[18px] font-bold leading-[24px] group-hover:text-[#F15E03]">Day care centres</h5>
+        <p class="text-[#000] text-[15px] leading-[26px] font-medium">We arrange comprehensive risk coverage to suit your needs.</p>
+      </div>
+      <div class="col-span-1 p-[40px] rounded-[10px] text-center group cursor-pointer our">
+        <div class="flex justify-center mb-[24px]"><img class="w-[80px] h-[80px]" src="images/services/physiotherapists.png" alt=""></div>
+        <h5 class="text-[#010E37] text-[18px] font-bold leading-[24px] group-hover:text-[#F15E03]">Physiotherapists</h5>
+        <p class="text-[#000] text-[15px] leading-[26px] font-medium">We provide you with complete information about problems like medical negligence cases.</p>
+      </div>
+    </div>
+  </section>
+  <section class="export-medico px-[15px] md:px-0 bg-[#043370] py-[50px]">
+    <div class="max-w-[1300px] mx-auto grid grid-cols-1 md:grid-cols-2">
+     <div class="col-span-1 pe-0 md:pe-[30px] relative">
+       <img class="h-[220px] md:h-[415px] w-full mt-0 md:mt-[30px] mb-[30px] md:mb-0" src="images/export-medico.jpg" alt="">
+       <div class="flex items-center gap-3 ps-3 absolute top-[33px]">
+        <img src="images/export-medico-logo.jpg" class="h-[40px] w-[40px] rounded-[50%]" alt="">
+        <h4 class="text-[18px] font-medium leading-[24px] text-[#EEEEEE] hidden md:block">Professional Indemnity Insurance with Medico...</h4>
+        <h4 class="text-[18px] font-medium leading-[24px] text-[#EEEEEE] block md:hidden">Professional Indemnity..</h4>
+        <div class="text-center hidden md:block"><i class="fa-solid fa-clock text-[22px] text-white"></i><div class="font-medium text-[15px] leading-[19px] text-[#EEEEEE]">Watch later</div></div>
+        <div class="text-center hidden md:block"><i class="fa-solid fa-share-nodes text-[23px] text-white"></i><div class="font-medium text-[15px] leading-[19px] text-[#EEEEEE]">Share</div></div>
+       </div>
+       <span class="bg-[#f00] cursor-pointer px-[25px] pt-[10px] pb-[8px] rounded-[15px] absolute top-[89px] md:top-[206px] start-[126px] md:start-[280px]"><i class="fa-solid fa-play text-white text-[22px]"></i></span>
+       <div><span class="flex items-center rounded-[24px] text-[18px] bg-[#0000004d] h-[42px] text-white absolute end-[30px] md:end-[40px] bottom-[50px] md:bottom-[50px] px-3">Watch on<i class="fa-brands fa-youtube ms-2 me-1 text-[25px]"></i><b class="font-bold">Youtube</b></span></div>
+    </div>
+    <div class="col-span-1">
+      <h5 class="text-white text-[17px] font-semibold leading-[16px] text-center md:text-start mb-2 md:mb-0">What we offer?</h5>
+      <h2 class="mb-[18px] text-white text-[35px] md:text-[36px] font-medium leading-[40px] text-center md:text-start">Expert Medico-Legal Support When You Need It Most.</h2>
+      <p class="text-white text-justify mb-[16px] text-[17px] font-medium leading-[28px]">DocLegal, a leading provider of Risk Management Services for Doctors and Hospitals, helps medical professionals and makes a specialty of their professional lives. We intend to empower our professional services with first-rate services for any Medical issues number they may face. We understand the significance of Diagnostic and medical negligence instances, and we provide green and exceptional help through the claims manner. If a patient has suffered due to a remedy going incorrect or a scientific mishap, they have the proper to search for compensation. Medical negligence cases require professionals who honestly apprehend the complexities of the healthcare device. The DocLegal has the essential skills, and dedication to combat your rights and offer you the offerings you deserve. We take pride in our team of medical legal experts who excel at handling challenging instances of medical negligence in support of doctors and hospitals.</p>
+    </div>
+  </section>
+    <section class="features px-[15px] md:px-0 bg-[#F7F7F9] py-[50px]">
+        <div class="max-w-[1300px] mx-auto">
+          <div class="pb-[20px]">
+            <div class="pb-[10px]"><p class="text-[#F15E03] text-[18px] font-semibold leading-[18px] text-center">DCPL Salient Features</p></div>
+            <h2 class="mb-[18px] max-w-[800px] text-[#010E37] text-[35px] font-bold leading-[40px] text-center mx-auto">Comprehensive Coverage for Every Medical Risk Need</h2>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-[25px]">
+            <div class="col-span-1 h-[270px] px-[30px] pt-[30px] pb-[20px] border-[1px] border-[#E1E1E1] rounded-[9px] hover:shadow-xl hover:bg-white">
+              <div class="mb-[24px] flex justify-center"><img class="w-[70px] h-[70px]" src="images/features/wide.png" alt=""></div>
+              <h4 class="mb-[20px] text-[#010E37] text-[20px] leading-[26px] text-center font-bold">Wide coverage</h4>
+              <p class="text-[#000] text-center text-[16px] leading-[26px] font-normal">We at DCPL cover almost all of the surgical and medical specialties & super specialties under our services</p>
+            </div>
+            <div class="col-span-1 h-[270px] px-[30px] pt-[30px] pb-[20px] border-[1px] border-[#E1E1E1] rounded-[9px] hover:shadow-xl hover:bg-white">
+              <div class="mb-[24px] flex justify-center"><img class="w-[70px] h-[70px]" src="images/features/breach.png" alt=""></div>
+              <h4 class="mb-[20px] text-[#010E37] text-[20px] leading-[26px] text-center font-bold">Breach of confidentiality</h4>
+              <p class="text-[#000] text-center text-[16px] leading-[26px] font-normal">Policy covers claims arising due to breach of confidentiality towards the patient</p>
+            </div>
+            <div class="col-span-1 h-[270px] px-[30px] pt-[30px] pb-[20px] border-[1px] border-[#E1E1E1] rounded-[9px] hover:shadow-xl hover:bg-white">
+              <div class="mb-[24px] flex justify-center"><img class="w-[70px] h-[70px]" src="images/features/retroactive.png" alt=""></div>
+              <h4 class="mb-[20px] text-[#010E37] text-[20px] leading-[26px] text-center font-bold">Retroactive Cover</h4>
+              <p class="text-[#000] text-center text-[16px] leading-[26px] font-normal">Policy can cover work done prior to inception of the policy, as per the retroactive date</p>
+            </div>
+            <div class="col-span-1 h-[270px] px-[30px] pt-[30px] pb-[20px] border-[1px] border-[#E1E1E1] rounded-[9px] hover:shadow-xl hover:bg-white">
+              <div class="mb-[24px] flex justify-center"><img class="w-[70px] h-[70px]" src="images/features/experienced.png" alt=""></div>
+              <h4 class="mb-[20px] text-[#010E37] text-[20px] leading-[26px] text-center font-bold">Experienced Legal Cell</h4>
+              <p class="text-[#000] text-center text-[16px] leading-[26px] font-normal">Our legal cell consists of experienced, Agile, Perseverant, Logical & lawyers with high winning ratio.</p>
+            </div>
+            <div class="col-span-1 h-[270px] px-[30px] pt-[30px] pb-[20px] border-[1px] border-[#E1E1E1] rounded-[9px] hover:shadow-xl hover:bg-white">
+              <div class="mb-[24px] flex justify-center"><img class="w-[70px] h-[70px]" src="images/features/complete.png" alt=""></div>
+              <h4 class="mb-[20px] text-[#010E37] text-[20px] leading-[26px] text-center font-bold">Complete Coverage</h4>
+              <p class="text-[#000] text-center text-[16px] leading-[26px] font-normal">over for both qualified and unqualified medical & paramedic staff of establishments.</p>
+            </div>
+            <div class="col-span-1 h-[270px] px-[30px] pt-[30px] pb-[20px] border-[1px] border-[#E1E1E1] rounded-[9px] hover:shadow-xl hover:bg-white">
+              <div class="mb-[24px] flex justify-center"><img class="w-[70px] h-[70px]" src="images/features/support.png" alt=""></div>
+              <h4 class="mb-[20px] text-[#010E37] text-[20px] leading-[26px] text-center font-bold">24×7 support service</h4>
+              <p class="text-[#000] text-center text-[16px] leading-[26px] font-normal">We at DCPL are just a call away. You can call us as per your convenience and we will promptly serve you.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    <section class="support bg-[#043370] py-[50px] md:py-[80px]">
+        <div class="max-w-[1300px] mx-auto px-[15px] md:px-0 block md:flex gap-5">
+          <div class="mb-[30px] md:mb-0">
+            <div class="mb-[20px] flex justify-center"><img class="h-[70px] w-[70px]" src="images/support/support.png" alt=""></div>
+            <div class="mt-[10px]"><h4 class="text-[17px] font-semibold leading-[24px] text-white max-w-full md:max-w-[162px] text-center">24X7 Support Services</h4></div>
+          </div>
+          <div class="mb-[30px] md:mb-0">
+            <div class="mb-[20px] flex justify-center"><img class="h-[70px] w-[70px]" src="images/support/pan-india.png" alt=""></div>
+            <div class="mt-[10px]"><h4 class="text-[17px] font-semibold leading-[24px] text-white max-w-full md:max-w-[162px] text-center">Pan India Presence</h4></div>
+          </div>
+          <div class="mb-[30px] md:mb-0">
+            <div class="mb-[20px] flex justify-center"><img class="h-[70px] w-[70px]" src="images/support/medico.png" alt=""></div>
+            <div class="mt-[10px]"><h4 class="text-[17px] font-semibold leading-[24px] text-white max-w-full md:max-w-[162px] text-center">Medico Legal Cases</h4></div>
+          </div>
+          <div class="mb-[30px] md:mb-0">
+            <div class="mb-[20px] flex justify-center"><img class="h-[70px] w-[70px]" src="images/support/affordable.png" alt=""></div>
+            <div class="mt-[10px]"><h4 class="text-[17px] font-semibold leading-[24px] text-white max-w-full md:max-w-[162px] text-center">Affordable Prices</h4></div>
+          </div>
+          <div class="mb-[30px] md:mb-0">
+            <div class="mb-[20px] flex justify-center"><img class="h-[70px] w-[70px]" src="images/support/experts.png" alt=""></div>
+            <div class="mt-[10px]"><h4 class="text-[17px] font-semibold leading-[24px] text-white max-w-full md:max-w-[162px] text-center">Medico Legal/ Legal Experts</h4></div>
+          </div>
+          <div class="mb-[30px] md:mb-0">
+            <div class="mb-[20px] flex justify-center"><img class="h-[70px] w-[70px]" src="images/support/case.png" alt=""></div>
+            <div class="mt-[10px]"><h4 class="text-[17px] font-semibold leading-[24px] text-white max-w-full md:max-w-[162px] text-center">Consumer Cases</h4></div>
+          </div>
+          <div class="mb-[30px] md:mb-0">
+            <div class="mb-[20px] flex justify-center"><img class="h-[70px] w-[70px]" src="images/support/doctor.png" alt=""></div>
+            <div class="mt-[10px]"><h4 class="text-[17px] font-semibold leading-[24px] text-white max-w-full md:max-w-[162px] text-center">Doctors Indemnity Policy</h4></div>
+          </div>
+          <div class="mb-[30px] md:mb-0">
+            <div class="mb-[20px] flex justify-center"><img class="h-[70px] w-[70px]" src="images/support/hospital.png" alt=""></div>
+            <div class="mt-[10px]"><h4 class="text-[17px] font-semibold leading-[24px] text-white max-w-full md:max-w-[162px] text-center">Hospital Error & Omissions Policy</h4></div>
+          </div>
+        </div>
+      </section>
+    <section class="mission px-[15px] md:px-0">
+        <div class="max-w-[1300px] mx-auto pt-[50px] md:pt-[70px] pb-[50px] grid md:grid-cols-2 grid-cols-1 gap-[40px] md:gap-[105px]">
+          <div class="col-span-1 flex items-center order-2 md:order-1">
+            <div>
+              <h4 class="mb-[18px] text-[#F15E03] text-[32px] md:text-[18px] text-center md:text-start font-bold leading-[40px] md:leading-[20px]">Mission, Vision & Our Commitment</h4>
+              <h1 class="pb-[20px] text-[#010E37] text-[36px] font-bold leading-[36px]">Keep going with your passion.</h1>
+              <div class="px-[20px] md:px-[30px] pt-[30px] pb-[25px] border-s-[3px] border-[#1268FB] flex gap-4" style="box-shadow: 0px 4px 60px 0px rgba(0, 0, 0, 0.06);">
+                <div><span class="rounded-[3px] h-[50px] w-[50px] bg-[#043370] flex justify-center items-center"><img src="images/our-mission.png" alt=""></span></div>
+                <div>
+                  <h4 class="mb-[13px] text-[#010E37] text-[24px] font-bold leading-[30px]">Our Mission</h4>
+                  <p class="text-[#939185] font-medium text-[16px] leading-[26px] hidden md:block">To provide quality medicolegal services with technology perfection for the best possible legal solution with well-equipped infrastructure by competent and devoted professionals at afdordable cost.</p>
+                  <p class="text-[#939185] font-medium text-[16px] leading-[26px] block md:hidden">To provide quality medicolegal services with technology perfection for the best possible legal solution with well-equipped...</p>
+                </div>
+              </div>
+              <div class="px-[20px] md:px-[30px] pt-[30px] pb-[25px] flex gap-4 border-s-[3px] border-white hover:border-s-[3px] hover:border-[#1268FB] our">
+                <div><span class="rounded-[3px] h-[50px] w-[50px] bg-[#043370] flex justify-center items-center"><img src="images/our-vision.png" alt=""></span></div>
+                <div>
+                  <h4 class="mb-[13px] text-[#010E37] text-[24px] font-bold leading-[30px]">Our Vision</h4>
+                  <p class="text-[#939185] font-medium text-[16px] leading-[26px]">To promote DocLegal as the top choice for doctors and hospitals in ensuring complete professional and personal security.</p>
+                </div>
+              </div>
+              <div class="px-[20px] md:px-[30px] pt-[30px] pb-[25px] flex gap-4 border-s-[3px] border-white hover:border-s-[3px] hover:border-[#1268FB] our">
+                <div><span class="rounded-[3px] h-[50px] w-[50px] bg-[#043370] flex justify-center items-center"><img src="images/our-commitment.png" alt=""></span></div>
+                <div>
+                  <h4 class="mb-[13px] text-[#010E37] text-[24px] font-bold leading-[30px]">Our Commitment</h4>
+                  <p class="text-[#939185] font-medium text-[16px] leading-[26px] hidden md:block">To be recognized as an emerging medico legal company by 2025 & make a strong presence in regional & domestic market by offering novel, cost effective & client curated packages in the segment.</p>
+                  <p class="text-[#939185] font-medium text-[16px] leading-[26px] block md:hidden">To be recognized as an emerging medico legal company by 2025 & make a strong presence in regional & domestic market by offering...</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-1 order-1 md:order-2">
+            <img class="rounded-[10px]" src="images/mission.png" alt="">
+          </div>
+        </div>
+      </section>
+    <section class="membership px-[15px] md:px-0 mt-[30px]">
+        <div class="max-w-[1300px] mx-auto bg-[#043370] py-[50px] px-[12px] rounded-[15px] md:rounded-[50px] relative">
+          <h1 class="mb-[18px] text-center text-white text-[30px] md:text-[36px] font-bold leading-[40px]">DCPL Membership Calculator</h1>
+          <p class="mb-[50px] text-center text-[#FFFFFFCC] text-[17px] font-medium leading-[28px]">Choose the best subscription plan, You can use our premium calculator to choose the best one.</p>
+          <div class="flex justify-center"><button class="text-[19px] font-semibold leading-[30px] rounded-[3px] py-[15px] px-[21px] bg-white text-[#002699]">Membership Calculator</button></div>
+          <img class="hidden md:block absolute start-0 top-[20%]" src="images/membership1.png" alt="">
+          <img class="hidden md:block absolute end-[3%] bottom-0" src="images/membership2.png" alt="">
+        </div>
+    </section>
+    <section class="enquiry pt-[50px] px-[15px] md:px-0">
+        <div class="max-w-[1300px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div class="col-span-1 flex items-center">
+                <div>
+                    <h4 class="mb-[24px] text-[19px] font-bold text-[#F15E03] text-center md:text-start">Enquiry now</h4>
+                    <h1 class="mb-[18px] text-[#010E37] text-[36px] font-bold tracking-tight leading-[40px] text-center md:text-start" style="text-shadow: 0px 0px 10px rgba(0,0,0,0.3);">We'll be glad to answer any questions you may have.</h1>
+                    <p class="mb-[16px] text-[#343E5F] text-[19px] font-medium leading-[30px] text-center md:text-start">Need Assistance with Your Medical-Legal Problem?</p>
+                    <p class="mb-[16px] text-[#343E5F] text-[19px] font-medium leading-[30px] text-center md:text-start">Contact Us for Expert Advice</p>
+                    <p class="mb-[16px] text-[#848793] text-[18px] font-medium leading-[30px] max-w-[100%] md:max-w-[85%] text-center md:text-start">If you’re looking for Medico-legal risk management solutions, contact us today! We’ll be glad to answer any questions you may have and help you find the right Medico-legal solution for your medical-law problem.</p>
+                    <div class="flex justify-center md:justify-start"><div class="inline-block mt-[24px] text-white font-semibold text-[19px] rounded-[50px] py-[15px] px-[50px] bg-[#f3823d]">Contact Us</div></div>
+                </div>
+            </div>
+            <div class="col-span-1 border-[2px] border-[#043370] p-[30px]">
+                <h3 class="text-center font-semibold text-[28px] text-[#010E37] mb-[8px] leading-[34px]">Get a free quote</h3>
+                <p class="mb-[16px]">
+                    <label class="block mt-[20px] mb-[10px] font-medium text-[17px] leading-[24px] text-[#010E37] w-full"> Your name </label>
+                    <input class="h-[47px] p-[20px] rounded-[8px] shadow-xl bg-[#fff] font-normal text-[18px] text-[#010E37] w-full focus:outline-none border" type="text" placeholder="Enter your full name">
+                    <label class="block mt-[20px] mb-[10px] font-medium text-[17px] leading-[24px] text-[#010E37] w-full"> Email address </label>
+                    <input class="h-[47px] p-[20px] rounded-[8px] shadow-xl bg-[#fff] font-normal text-[18px] text-[#010E37] w-full focus:outline-none border" type="text" placeholder="Enter your email">
+                    <label class="block mt-[20px] mb-[10px] font-medium text-[17px] leading-[24px] text-[#010E37] w-full"> Subject </label>
+                    <select id="" class="h-[47px] px-[15px] rounded-[8px] shadow-xl bg-[#fff] font-normal text-[18px] leading-[24px] text-[#9ea3ac] w-full focus:outline-none border">
+                        <option selected>Select a service</option>
+                        <option value="US" selected>Web Development</option>
+                        <option value="CA">GraphDesign</option>
+                    </select>
+                    <label class="block mt-[20px] mb-[10px] font-medium text-[17px] leading-[24px] text-[#010E37] w-full"> Write your message </label>
+                    <input class="h-[47px] p-[20px] rounded-[8px] shadow-xl bg-[#fff] font-normal text-[18px] text-[#010E37] w-full focus:outline-none border" type="text" placeholder="Write us your question here...">
+                    <span class="flex justify-end"><button class="mt-[20px] h-[47px] p-[20px] shadow-md text-white font-semibold leading-[9px] text-[14px] bg-[#f3823d] rounded-[50px] cursor-pointer">Get Free Quote</button></span>
+                </p>
+            </div>
+        </div>
+      </section>
+    <section class="latest-news px-[15px] md:px-0 py-[50px]">
+        <div class="max-w-[1300px] mx-auto">
+          <div class="pb-[30px] block md:flex justify-between">
+            <div>
+                <div class="md:mb-[24px] text-[#F15E03] text-[18px] font-bold text-center md:text-start"> Latest News Corner </div>
+                <div class="text-[#010E37] text-[34px] font-bold leading-10 md:leading-5 text-center"> Get every single latest news update from here </div>
+            </div>
+            <div class="flex items-end md:justify-start justify-center md:mt-0 mt-3">
+                <span class="text-white bg-[#F3823D] text-[18px] font-bold leading-[18px] py-[20px] px-[30px] rounded-md">Read More Blog</span>
+            </div>
+          </div>
+          <div class="grid md:grid-cols-2 grid-cols-1 gap-[25px]">
+            <div class="col-span-1 border-[1px] border-[#E1E1E1] overflow-hidden rounded-[10px] hover:shadow-2xl">
+                <img src="images/latest-news1.jpg" class="w-full h-auto" alt="">
+                <div class="p-[30px]">
+                  <div class="flex justify-between items-start">
+                    <span class="text-[16px] font-medium leading-[24px] text-[#343E5F] bg-[#343E5F0D] rounded-[50px] px-[25px] py-[6px] cursor-pointer">Blog</span>
+                    <div class="flex gap-[10px]">
+                        <i class="fa-regular fa-calendar-minus text-[22px]"></i>
+                        <span class="text-[16px] font-medium leading-[24px] text-[#343E5F]">July 6, 2024</span>
+                    </div>
+                  </div>
+                  <h3 class="mt-[24px] mb-[10px] text-[20px] font-bold leading-5 text-[#010E37]">10-month-vintage toddler dies</h3>
+                  <p class="mb-[24px] text-[17px] leading-[23px] text-[#707890] font-medium"> Welcome to part five of a series of articles covering the technical knowledge that every... </p>
+                  <span class="text-[18px] font-semibold leading-[24px] text-[#343E5F] cursor-pointer">Read More <i class="fa-solid fa-arrow-right-long ms-2"></i></span>
+                </div>
+            </div>
+            <div class="col-span-1">
+                <div class="border-[1px] border-[#E1E1E1] overflow-hidden rounded-[10px] hover:shadow-2xl grid md:grid-cols-2 grid-cols-1 mb-[24px]">
+                    <div class="col-span-1">
+                        <img src="images/latest-news2.jpg" class="md:h-[309px] object-cover" alt="">
+                    </div>
+                    <div class="col-span-1 flex items-center">
+                        <div class="p-[24px]">
+                            <div class="flex justify-between items-center">
+                                <span class="text-[15px] font-medium leading-[24px] text-[#343E5F] bg-[#343E5F0D] rounded-[50px] px-[25px] py-[6px] cursor-pointer">Blog</span>
+                                <div class="flex gap-[10px]">
+                                    <i class="fa-regular fa-calendar-minus text-[22px]"></i>
+                                    <span class="text-[15px] font-medium leading-[24px] text-[#343E5F]">July 6, 2024</span>
+                                </div>
+                            </div>
+                            <h3 class="mt-[24px] mb-[10px] text-[19px] font-semibold leading-5 text-[#010E37]">10-month-vintage toddler dies</h3>
+                            <p class="mb-[24px] text-[16px] leading-[23px] text-[#707890] font-medium">Welcome to part five of a series of articles...</p>
+                            <span class="text-[16px] font-semibold leading-[24px] text-[#343E5F] cursor-pointer">Read More <i class="fa-solid fa-arrow-right-long ms-2"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-[1px] border-[#E1E1E1] overflow-hidden rounded-[10px] hover:shadow-2xl grid md:grid-cols-2 grid-cols-1 mb-[24px]">
+                    <div class="col-span-1">
+                        <img src="images/latest-news3.jpg" class="md:h-[309px] object-cover" alt="">
+                    </div>
+                    <div class="col-span-1 flex items-center">
+                        <div class="p-[24px]">
+                            <div class="flex justify-between items-center">
+                                <span class="text-[15px] font-medium leading-[24px] text-[#343E5F] bg-[#343E5F0D] rounded-[50px] px-[25px] py-[6px] cursor-pointer">Blog</span>
+                                <div class="flex gap-[10px]">
+                                    <i class="fa-regular fa-calendar-minus text-[22px]"></i>
+                                    <span class="text-[15px] font-medium leading-[24px] text-[#343E5F]">April 9, 2023</span>
+                                </div>
+                            </div>
+                            <h3 class="mt-[24px] mb-[10px] text-[19px] font-semibold leading-5 text-[#010E37]">Madras HC Orders...</h3>
+                            <p class="mb-[24px] text-[16px] leading-[23px] text-[#707890] font-medium">Over the past few years, conversational AI has been...</p>
+                            <span class="text-[16px] font-semibold leading-[24px] text-[#343E5F] cursor-pointer">Read More <i class="fa-solid fa-arrow-right-long ms-2"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  <section class="testimonials py-[50px]">
+    <div class="max-w-[1300px] pb-[45px]">  
+        <h3 class="mb-[10px] text-[#F15E03] text-[18px] font-medium text-center" style="font-family: Roboto Serif;">Testimonials</h3>
+        <h1 class="mb-[22px] text-[#010E37] text-[36px] font-semibold leading-10 text-center">Our happy clients says about us.</h1>
+        <p class="mb-[16px] text-[#343E5F] text-[16px] font-medium leading-7 text-center">Join us today and experience the difference for yourself.</p>
+    </div>
+    <div class="max-w-[1175px] mx-auto mt-3">
+        <div class="responsive">
+          <div class="px-[15px]">
+              <div class="text-center bg-[#F7F7F9] rounded-[3px] p-[30px]">
+                  <div class="flex justify-center">
+                   <img src="" class="w-[75px] h-[75px] rounded-[100%]" alt="">
+               </div>
+               <h4 class="text-[#343E5F] text-[18px] font-semibold mt-[15px] mb-[5px]">Dr Virendra Gupta</h4>
+               <span class="text-[#343E5F] text-[14px]">MD, Pediatrician</span>
+               <p class="text-[#010E37] text-[18px] font-bold leading-[25px] mt-[20px]">I highly recommend DocLegal Services for anyone seeking reliable assistance in the legal field. They provided insightful guidance and expertise, ensuring a seamless experience.</p>
+               </div>
+          </div>
+          <div class="px-[15px]">
+              <div class="text-center bg-[#F7F7F9] rounded-[3px] p-[30px]">
+                  <div class="flex justify-center">
+                   <img src="" class="w-[75px] h-[75px] rounded-[100%]" alt="">
+               </div>
+               <h4 class="text-[#343E5F] text-[18px] font-semibold mt-[15px] mb-[5px]">Dr Suresh Kumar Joshi</h4>
+               <span class="text-[#343E5F] text-[14px]">MD, Radiologist</span>
+               <p class="text-[#010E37] text-[18px] font-bold leading-[25px] mt-[20px]">I am delighted with the reliable and trusted services provided by DocLegL . Their Services offer the best management full support, exceeding my expectations. I highly recommend their services to anyone in need of top-notch legal assistance. Thank you!</p>
+               </div>
+          </div>
+          <div class="px-[15px]">
+              <div class="text-center bg-[#F7F7F9] rounded-[3px] p-[30px]">
+                  <div class="flex justify-center">
+                   <img src="" class="w-[75px] h-[75px] rounded-[100%]" alt="">
+               </div>
+               <h4 class="text-[#343E5F] text-[18px] font-semibold mt-[15px] mb-[5px]">Dr Vijendra Verma</h4>
+               <span class="text-[#343E5F] text-[14px]">Dental Surgeon</span>
+               <p class="text-[#010E37] text-[18px] font-bold leading-[25px] mt-[20px]">I highly recommend DocLegal for its exceptional Services. Their trustable services and best support team truly set them apart in the industry. My experience with them has been nothing short of amazing.</p>
+               </div>
+          </div>
+          <div class="px-[15px]">
+              <div class="text-center bg-[#F7F7F9] rounded-[3px] p-[30px]">
+                  <div class="flex justify-center">
+                   <img src="" class="w-[75px] h-[75px] rounded-[100%]" alt="">
+               </div>
+               <h4 class="text-[#343E5F] text-[18px] font-semibold mt-[15px] mb-[5px]">Dr Subham Agarwal</h4>
+               <span class="text-[#343E5F] text-[14px]">MS, Orthopedics</span>
+               <p class="text-[#010E37] text-[18px] font-bold leading-[25px] mt-[20px]">The Services provided by DocLegal have been exceptional. Their supportable team quickly solves issues with the expertise and guidance of their helpful management. I highly recommend their services.</p>
+               </div>
+          </div>
+        </div>
+      </div>
+  </section>
+  <footer>
+    <section class="newsletters relative z-50 px-[15px] md:px-0">
+       <div class="max-w-[1300px] mx-auto bg-[#1268FB] px-[40px] md:px-[100px] md:pt-[50px] pt-[20px] md:pb-[50px] pb-[5px] rounded-[20px]">
+        <div class="md:flex block justify-between items-end gap-10 mt-[20px] md:mb-[45px] mb-[20px]">
+            <div class="text-white text-[36px] font-bold leading-[40px] w-[100%] text-center md:text-start">Subscribe to our newsletters</div>
+            <div class="bg-[#02010100] border-white border-2 rounded-[50px] py-[5px] ps-[20px] pe-[5px] w-full md:flex block justify-between items-center md:mt-0 mt-5">
+               <span class="text-[20px] text-white font-semibold">Your Email</span>
+               <input class="md:block hidden bg-white text-[20px] font-semibold text-[#1268FB] rounded-[50px] px-[20px] py-[10px] h-[50px]" type="button" value="Subscribe Now">
+            </div>
+            <div class="flex justify-end"><input class="md:hidden mt-3 block bg-white text-[20px] font-semibold text-[#1268FB] rounded-[50px] px-[20px] py-[10px] h-[50px]" type="button" value="Subscribe Now"></div>
+        </div>
+       </div>
+    </section>
+    <section class="bg-[#010E37] mt-[-125px] pt-[200px] px-[15px] md:px-0">
+     <div class="max-w-[1300px] mx-auto grid grid-cols-9 md:pb-[80px] pb-[30px]">
+        <div class="col-span-9 md:col-span-3">
+            <img src="images/footer.png" class="md:w-[200px] w-[150px] mb-[30px]" alt="">
+            <p class="mb-[25px] text-[#FFFFFFCC] text-[17px] font-normal leading-[30px] max-w-[360px]">Our professional risk management company protects the medical community with cashless services and emotional support from legal challenges. Join us for peace of mind, and focus on your patients and practice.</p>
+            <div class="flex gap-5">
+                <div class="w-[30px] h-[30px] leading-[30px] rounded-[100px] bg-[#FFFFFF1A] flex justify-start items-center"><i class="fa-brands fa-twitter text-white"></i></div>
+                <div class="w-[30px] h-[30px] leading-[30px] rounded-[100px] bg-[#FFFFFF1A] flex justify-start items-center"><i class="fa-brands fa-facebook-f text-white"></i></div>
+                <div class="w-[30px] h-[30px] leading-[30px] rounded-[100px] bg-[#FFFFFF1A] flex justify-start items-center"><i class="fa-brands fa-instagram text-white"></i></div>
+                <div class="w-[30px] h-[30px] leading-[30px] rounded-[100px] bg-[#FFFFFF1A] flex justify-start items-center"><i class="fa-brands fa-github text-white"></i></div>
+            </div>
+        </div>
+        <div class="col-span-9 md:col-span-2 ps-0 md:ps-[70px] md:mt-0 mt-[40px]">
+            <h2 class="mb-[20px] text-white text-[25px] font-bold">Quick Link</h2>
+            <div>
+                <div class="flex items-center pb-[12px]"><div class="mt-[2px] border border-[#1268FB] w-[15px]"></div><p class="text-[#FFFFFFCC] text-[17px] font-normal leading-[30px]">Who we are</p></div>
+                <div class="flex items-center pb-[12px]"><div class="mt-[2px] border border-[#1268FB] w-[15px]"></div><p class="text-[#FFFFFFCC] text-[17px] font-normal leading-[30px]">Membership</p></div>
+                <div class="flex items-center pb-[12px]"><div class="mt-[2px] border border-[#1268FB] w-[15px]"></div><p class="text-[#FFFFFFCC] text-[17px] font-normal leading-[30px]">Risk Management</p></div>
+                <div class="flex items-center pb-[12px]"><div class="mt-[2px] border border-[#1268FB] w-[15px]"></div><p class="text-[#FFFFFFCC] text-[17px] font-normal leading-[30px]">Indemnity Insurance</p></div>
+                <div class="flex items-center"><div class="mt-[2px] border border-[#1268FB] w-[15px]"></div><p class="text-[#FFFFFFCC] text-[17px] font-normal leading-[30px]">Our Organization</p></div>
+            </div>
+        </div>
+        <div class="col-span-9 md:col-span-2 md:mt-0 mt-[40px]">
+            <h2 class="mb-[20px] text-white text-[25px] font-bold">Our Services</h2>
+            <div>
+                <div class="flex items-center pb-[12px]"><div class="mt-[2px] border border-[#1268FB] w-[15px]"></div><p class="text-[#FFFFFFCC] text-[17px] font-normal leading-[30px]">Why you should choose us</p></div>
+                <div class="flex items-center pb-[12px]"><div class="mt-[2px] border border-[#1268FB] w-[15px]"></div><p class="text-[#FFFFFFCC] text-[17px] font-normal leading-[30px]">Our Provide Services</p></div>
+                <div class="flex items-center pb-[12px]"><div class="mt-[2px] border border-[#1268FB] w-[15px]"></div><p class="text-[#FFFFFFCC] text-[17px] font-normal leading-[30px]">Why Do You Need</p></div>
+                <div class="flex items-center pb-[12px]"><div class="mt-[2px] border border-[#1268FB] w-[15px]"></div><p class="text-[#FFFFFFCC] text-[17px] font-normal leading-[30px]">Our Objectives</p></div>
+                <div class="flex items-center"><div class="mt-[2px] border border-[#1268FB] w-[15px]"></div><p class="text-[#FFFFFFCC] text-[17px] font-normal leading-[30px]">Features of DCPL</p></div>
+            </div>
+        </div>
+        <div class="col-span-9 md:col-span-2 md:mt-0 mt-[40px]">
+            <h2 class="mb-[20px] text-white text-[25px] font-bold">Contact Info</h2>
+            <div class="flex gap-4 items-center pb-[12px]"><i class="fa-solid fa-phone-volume text-[20px] text-white"></i><p class="text-[17px] font-normal leading-[30px] text-[#FFFFFFCC]">91-9511331990</p></div>
+            <div class="flex gap-[10px] items-center pb-[12px]"><i class="fa-solid fa-square-phone text-[25px] text-[#5F2DEE]"></i><p class="text-[17px] font-normal leading-[30px] text-[#FFFFFFCC]">+91-18001234436</p></div>
+            <div class="flex gap-[12px] items-center pb-[12px]"><i class="fa-regular fa-envelope text-[22px] text-white"></i><p class="text-[17px] font-normal leading-[30px] text-[#FFFFFFCC]">contact@doclegalindia.com</p></div>
+            <div class="flex gap-4 pb-[12px]"><i class="fa-solid fa-location-dot text-[25px] text-[#5F2DEE] mt-2"></i><p class="text-[17px] font-normal leading-[30px] text-[#FFFFFFCC] max-w-[220px]">A-42 Jai Mata Vaishno Nagar Gajsinghpura Ajmer Rd Jaipur (Rajasthan)-302021</p></div>
+        </div>
+     </div>
+    </section>
+    <section class="bg-[#010E37] px-[15px] md:px-0">
+        <div class="max-w-[1300px] mx-auto border-[#FFFFFF1A] border-t-[1px] py-[35px] md:flex block justify-between">
+            <div class="text-[#FFFFFFCC] text-[20px] font-medium leading-[30px] md:mb-0 mb-3">© Copyright 2024, All Rights Reserved</div>
+            <ul class="flex text-[#FFFFFFCC] text-[20px] font-medium leading-[30px] gap-5"><li>Terms & Conditions</li><li>Privacy policy</li><li>Support</li></ul>
+        </div>
+    </section>
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js" integrity="sha512-eP8DK17a+MOcKHXC5Yrqzd8WI5WKh6F1TIk5QZ/8Lbv+8ssblcz7oGC8ZmQ/ZSAPa7ZmsCU4e/hcovqR8jfJqA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="app.js"></script>
+</body>
+</html>
